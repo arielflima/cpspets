@@ -1,5 +1,7 @@
 import styled from 'styled-components';
 
+import { Link } from 'react-router-dom';
+
 // import FiArrowRight from 'react-icons/fi';
 import landing from '../../assets/landing.png';
 import logo from '../../assets/logo.png';
@@ -7,7 +9,7 @@ import logo from '../../assets/logo.png';
 export const Container = styled.div`
   width: 100vw;
   height: 100vh;
-  background: linear-gradient(329.54deg, #28df99 0%, #99f3bd 100%);
+  background: linear-gradient(329.54deg, #28df99 0%, #4fef8f 100%);
 
   display: flex;
   justify-content: center;
@@ -58,7 +60,7 @@ export const ImgLanding = styled.img.attrs(() => ({
   margin-bottom: 100px;
 `;
 
-export const ButtonToHome = styled.button`
+export const ButtonToHome = styled(Link)`
   position: absolute;
   right: 0;
   bottom: 0;
@@ -76,7 +78,11 @@ export const ButtonToHome = styled.button`
 
   border: transparent;
 
-  /* transition: background-color 0.2s; */
+  transition: background-color 0.2s;
+
+  &:hover {
+    background: #28df99;
+  }
 `;
 
 export const ContentLogo = styled.div`
@@ -101,9 +107,17 @@ export const TitleLogo = styled.h1`
 `;
 
 export const ContentLocation = styled.div`
+  display: flex;
+  flex-direction: column;
+
   position: absolute;
   right: 0;
-  bottom: 100;
+  top: 0;
+
+  margin-top: 110px;
 `;
-export const City = styled.strong``;
-export const State = styled.span``;
+
+export const City = styled.h2`
+  font-weight: bold;
+`;
+export const State = styled.h3``;

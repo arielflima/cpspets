@@ -34,7 +34,7 @@ const Landing: React.FC = () => {
           <State>São Paulo</State>
         </ContentLocation>
 
-        <ButtonToHome>
+        <ButtonToHome to="/app">
           <FiArrowRight size={26} color="rgba(0, 0, 0, 0.6)" />
         </ButtonToHome>
       </Content>
