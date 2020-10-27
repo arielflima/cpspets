@@ -2,9 +2,7 @@ import styled from 'styled-components';
 
 import { Link } from 'react-router-dom';
 
-// import FiArrowRight from 'react-icons/fi';
 import landing from '../../assets/landing.png';
-import logo from '../../assets/logo.png';
 
 export const Container = styled.div`
   width: 100vw;
@@ -85,27 +83,6 @@ export const ButtonToHome = styled(Link)`
   }
 `;
 
-export const ContentLogo = styled.div`
-  flex: 1;
-  display: flex;
-  margin-left: -20px;
-  margin-bottom: 12px;
-`;
-
-export const Logo = styled.img.attrs(() => ({
-  src: logo,
-}))`
-  width: 100px;
-  height: 85px;
-`;
-
-export const TitleLogo = styled.h1`
-  margin-left: -18px;
-  font-size: 30px;
-  font-weight: 900;
-  line-height: 70px;
-`;
-
 export const ContentLocation = styled.div`
   display: flex;
   flex-direction: column;
@@ -120,4 +97,5 @@ export const ContentLocation = styled.div`
 export const City = styled.h2`
   font-weight: bold;
 `;
+
 export const State = styled.h3``;

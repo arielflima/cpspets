@@ -11,7 +11,7 @@ export const Container = styled.div`
 `;
 
 export const Aside = styled.aside`
-  width: 410px;
+  width: 400px;
   background: linear-gradient(329.54deg, #28df99 0%, #4fef8f 100%);
   padding: 80px;
 
@@ -43,8 +43,8 @@ export const TitleLogo = styled.h1`
   line-height: 70px;
 `;
 
-export const AsideTitle1 = styled.h2`
-  font-size: 40px;
+export const AsideTitle1 = styled.h3`
+  font-size: 34px;
   font-weight: 800;
   line-height: 42px;
   margin-top: 64px;
@@ -63,7 +63,9 @@ export const AsideFooter = styled.footer`
 `;
 
 export const AsideCity = styled.h2`
-  font-weight: 800;
+  font-weight: 700;
 `;
 
-export const AsideState = styled.h3``;
+export const AsideState = styled.h3`
+  font-weight: 500;
+`;

@@ -9,22 +9,19 @@ import {
   Title2,
   ImgLanding,
   ButtonToHome,
-  ContentLogo,
-  Logo,
-  TitleLogo,
   ContentLocation,
   City,
   State,
 } from './styles';
+
+import Logo from '../../utils/Logo';
 
 const Landing: React.FC = () => {
   return (
     <Container>
       <Content>
         <Aside>
-          <ContentLogo>
-            <Logo /> <TitleLogo>CPSPets</TitleLogo>
-          </ContentLogo>
+          <Logo />
           <Title>Leve alegria para um animalzinho</Title>
           <Title2>Arrume um amigo pra vida toda.</Title2>
         </Aside>
