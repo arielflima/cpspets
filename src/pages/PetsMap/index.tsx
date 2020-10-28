@@ -60,7 +60,7 @@ const PetsMap: React.FC = () => {
 
           return (
             <Marker position={[latitude, longitude]} icon={mapIcon} key={id}>
-              <PetPointPopup {...petPoint} />
+              <PetPointPopup name={name} />
             </Marker>
           );
         })}
