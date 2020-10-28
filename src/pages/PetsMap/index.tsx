@@ -1,6 +1,10 @@
-import React from 'react';
+import React, { useState } from 'react';
 
-import { Map, TileLayer, Marker, Popup } from 'react-leaflet';
+import { Map, TileLayer, Marker } from 'react-leaflet';
+import Logo from '../../utils/Logo';
+import mapIcon from '../../utils/MapIcon';
+import PetPointPopup from '../../utils/PetPointPopup';
+import 'leaflet/dist/leaflet.css';
 import {
   Container,
   Aside,
@@ -12,11 +16,23 @@ import {
   AsideState,
 } from './styles';
 
-import Logo from '../../utils/Logo';
-
-import 'leaflet/dist/leaflet.css';
+export interface IPetPoint {
+  id: number;
+  latitude: number;
+  longitude: number;
+  name: string;
+}
 
 const PetsMap: React.FC = () => {
+  const [petPoints, setPetPoints] = useState<IPetPoint[]>([
+    {
+      id: 1,
+      latitude: -22.8957085,
+      longitude: -47.0627667,
+      name: 'Lar dos dogs',
+    },
+  ]);
+
   return (
     <Container>
       <Aside>
@@ -38,6 +54,16 @@ const PetsMap: React.FC = () => {
         <TileLayer
           url={`https://api.mapbox.com/styles/v1/mapbox/light-v10/tiles/256/{z}/{x}/{y}@2x?access_token=${process.env.REACT_APP_MAPBOX_TOKEN}`}
         />
+
+        {petPoints.map(petPoint => {
+          const { name, id, longitude, latitude } = petPoint;
+
+          return (
+            <Marker position={[latitude, longitude]} icon={mapIcon} key={id}>
+              <PetPointPopup {...petPoint} />
+            </Marker>
+          );
+        })}
       </Map>
     </Container>
   );
